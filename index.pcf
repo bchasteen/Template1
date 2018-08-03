@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pcf-stylesheet path="/_resources/xsl/home.xsl" title="Home Page" extension="html"?>
+<!DOCTYPE document SYSTEM "http://commons.omniupdate.com/dtd/standard.dtd"> 
+
+<document xmlns:ouc="http://omniupdate.com/XSL/Variables">	
+	<headcode></headcode> <!-- before closing head tag -->
+	<bodycode></bodycode> <!-- after opening body tag -->
+	<footcode></footcode> <!-- before closing body tag -->
+
+	<ouc:properties label="config">
+		<parameter name="layout" type="select" group="Everyone" prompt="Page Layout" alt="Select a page layout.">
+			<option value="two-column" selected="false">Two Column</option>
+			<option value="three-column" selected="true">Three Column</option>
+		</parameter>
+		<parameter name="gallery-type" type="select" group="Everyone" prompt="Gallery" alt="Select an LDP type to display, if a gallery asset is added to page.">
+			<option value="pretty" selected="false">Pretty Photo</option>
+		</parameter>	
+	</ouc:properties>
+	<feature>
+		<ouc:div label="feature-title" group="Everyone" button="hide"><ouc:multiedit type="text" prompt="Slide Title" alt="Title of the feature displayed above the description, max 100 characters." section="Ferature Information"/>More Services with One Account</ouc:div>
+		<ouc:div label="feature-description" group="Everyone" button="hide"><ouc:multiedit type="textarea" prompt="Feature Description" alt="Description of the post displayed below the title, max 300 characters." rows="4"/>Your UGAMail account includes email, OneDrive for Business (file collaboration tool and storage), and free Microsoft Office ProPlus (Word, Excel, PowerPoint &amp; more) downloads for UGA students.</ouc:div>
+		<ouc:div label="feature-link" group="Everyone" button="hide"><ouc:multiedit type="text" prompt="Feature Link" alt="Enter an external URL or choose a file via the selector."/>http://eits.uga.edu</ouc:div>
+		<ouc:div label="feature-image" group="Everyone" button="hide"><ouc:multiedit type="image" prompt="Feature Image" alt="Image that will displayed to the right of the description, dimensions 420px X 250px."/><img src="http://via.placeholder.com/450x300" alt="More Services with One Account" /></ouc:div>
+	</feature>
+
+	<ouc:div label="carousel" group="Everyone" button-text="Carousel"><ouc:editor csspath="/_resources/ou/editor/home.css" cssmenu="/_resources/ou/editor/styles.txt" wysiwyg-class="leftcolumn"/><div id="carousel-example-generic" class="carousel slide">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="http://via.placeholder.com/965x300" alt="Slide 1"/>
+				<div class="carousel-caption">
+					<h3>Slide 1</h3>
+					<p>Text</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="http://via.placeholder.com/965x300" alt="Slide 2"/>
+				<div class="carousel-caption">
+					<h3>Slide 2</h3>
+					<p>Text</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="http://via.placeholder.com/965x300" alt="Slide 3"/>
+				<div class="carousel-caption">
+					<h3>Slide 3</h3>
+					<p>Text</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+		</div>
+	<p>&nbsp;</p>
+	</ouc:div>
+	<ouc:div label="headcontent" group="Everyone" button-text="Header Content">
+		<ouc:editor csspath="/_resources/ou/editor/home.css" cssmenu="/_resources/ou/editor/styles.txt" wysiwyg-class="leftcolumn"/>
+
+	</ouc:div>
+	<ouc:div label="maincontent" group="Everyone" button-text="Left Content"><ouc:editor csspath="/_resources/ou/editor/home.css" cssmenu="/_resources/ou/editor/styles.txt" wysiwyg-class="leftcolumn"/><h2>Welcome!</h2>
+		<p><span><span>Fusce id leo id mi efficitur placerat sit amet eget lorem. Cras ultricies metus sem, vitae cursus metus fermentum quis. Donec sagittis, nisi tristique tincidunt mollis, odio magna aliquam libero, sit amet laoreet ex velit vitae urna. Proin dolor lectus, aliquam nec magna id, tempor lacinia urna.</span></span></p>
+		<p>&nbsp;</p>
+		{{a:138626}}</ouc:div>
+	<ouc:div label="middlecontent" group="Everyone" button-text="Middle Content"><ouc:editor csspath="/_resources/ou/editor/home.css" cssmenu="/_resources/ou/editor/styles.txt" wysiwyg-class="leftcolumn"/>{{a:137497}}</ouc:div>
+	<ouc:div label="rightcontent" group="Everyone" button-text="Right Content"><ouc:editor csspath="/_resources/ou/editor/home.css" cssmenu="/_resources/ou/editor/styles.txt" wysiwyg-class="rightcontent"/><ul class="menu nav nav-list">
+		<li class="first leaf menu-mlid-2324"><a href="/contact/">Contact</a></li>
+		<li><a href="/about/calendar.html">Events Calendar</a></li>
+		<li><a href="/directory/">Meet our Staff</a></li>
+		</ul></ouc:div>
+</document>

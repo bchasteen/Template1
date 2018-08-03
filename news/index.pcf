@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pcf-stylesheet path="/_resources/xsl/news/news-listing.xsl" title="RSS Interior Page" extension="html"?>
+<!DOCTYPE document SYSTEM "http://commons.omniupdate.com/dtd/standard.dtd"> 
+
+<document xmlns:ouc="http://omniupdate.com/XSL/Variables">
+	<ouc:info><tcf></tcf><tmpl></tmpl></ouc:info>
+	
+	<headcode></headcode> <!-- before closing head tag -->
+	<bodycode></bodycode> <!-- after opening body tag -->
+	<footcode></footcode> <!-- before closing body tag -->
+	
+	<ouc:properties label="config">
+		<parameter section="RSS Setup" name="rss-feed" group="Everyone" prompt="RSS Feed" alt="Select the RSS feed to display. Default is directory feed." type="filechooser" path="/_resources/rss" lockout="yes">/_resources/rss/news.xml</parameter>
+		<parameter name="rss-limit" type="text" group="Everyone" prompt="RSS Limit" alt="Define the number of items to display. Default limit is 5.">2</parameter>
+		<parameter name="rss-pagination" type="select" group="Everyone" prompt="Show Pagination">
+<option value="true" selected="true">Yes</option>
+<option value="false" selected="false">No</option>
+</parameter>
+		<parameter name="layout" type="select" group="Everyone" prompt="Page Layout" alt="Select a page layout.">
+<option value="full-width" selected="false">Full Width</option>
+<option value="two-column" selected="true">Two Column</option>
+</parameter>
+		
+		<parameter name="gallery-type" type="select" group="Everyone" prompt="Gallery" alt="Select an LDP type to display, if a gallery asset is added to page.">
+<option value="pretty" selected="true">Pretty Photo</option>
+</parameter>
+	</ouc:properties>
+	
+	<ouc:div label="maincontent" group="Everyone" button-text="Main Content">
+		<ouc:editor csspath="/_resources/ou/editor/interior.css" cssmenu="/_resources/ou/editor/styles.txt" wysiwyg-class="maincontent"/>
+	</ouc:div>
+	
+</document>

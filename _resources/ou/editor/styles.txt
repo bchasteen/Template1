@@ -1,0 +1,4 @@
+.img-responsive	Responsive Image
+.pull-left padd-right	Left-Aligned Content
+.embed-responsive embed-responsive-16by9	Rexponsive 16x9 Video
+.embed-responsive embed-responsive-4by3	Rexponsive 4x3 Video
